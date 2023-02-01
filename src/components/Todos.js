@@ -7,9 +7,7 @@ const Todos = () => {
   const context = useContext(todoContext)
   const { todos, getTodos, editTodo } = context
   useEffect(() => {
-    // console.log();
     if (localStorage.getItem('token')) {
-      // console.log(getTodos());
       getTodos()
     } else {
       navigate('/login')
